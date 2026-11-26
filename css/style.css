@@ -1,0 +1,1393 @@
+/* =========================
+   VELOURA - LUXURY WEBSITE
+========================= */
+
+:root {
+    --ivory: #F5EFE7;
+    --champagne: #D8C4AE;
+    --mocha: #9B7764;
+    --espresso: #49352E;
+    --gold: #C6A56B;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--ivory);
+    color: var(--espresso);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement {
+    background: var(--espresso);
+    color: var(--white);
+    text-align: center;
+    padding: 11px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 6%;
+    background: var(--ivory);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a,
+.nav-icons a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.nav-icons a:hover {
+    color: var(--mocha);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 570px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 24, 19, 0.65),
+            rgba(35, 24, 19, 0.08)
+        ),
+        url('https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+}
+
+.hero-content {
+    max-width: 540px;
+    color: var(--white);
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 14px;
+    line-height: 2;
+    max-width: 410px;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: var(--ivory);
+    color: var(--espresso);
+    padding: 17px 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: var(--gold);
+}
+
+/* CATEGORIES */
+
+.categories {
+    padding: 90px 7%;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--mocha);
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.categories h2 {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    text-align: left;
+}
+
+.category-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.02);
+}
+
+.skincare {
+    background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=85');
+}
+
+.makeup {
+    background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85');
+}
+
+.bodycare {
+    background-image: url('https://images.unsplash.com/photo-1600428853876-fb5a850b444f?auto=format&fit=crop&w=800&q=85');
+}
+
+.category-card h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 20px 0 8px;
+}
+
+.category-card span {
+    color: var(--mocha);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--espresso);
+    color: var(--ivory);
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.footer h2 {
+    font-size: 35px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+.footer p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+.footer small {
+    display: block;
+    margin-top: 30px;
+    color: var(--champagne);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .nav-icons {
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 45px 7%;
+    }
+
+    .categories {
+        padding: 65px 6%;
+    }
+
+    .categories h2 {
+        font-size: 32px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-image {
+        height: 350px;
+    }
+} 
+/* =========================
+   VELOURA LOGIN PAGE
+========================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #F5EFE7, #E9DCCE);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+    background: #FFFFFF;
+    padding: 45px 40px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(73, 53, 46, 0.10);
+}
+
+.auth-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    letter-spacing: 6px;
+    color: #49352E;
+}
+
+.auth-tagline {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #9B7764;
+    margin: 12px 0 35px;
+}
+
+.auth-container h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    font-weight: 400;
+}
+
+.auth-description {
+    font-size: 13px;
+    color: #9B7764;
+    margin-bottom: 30px;
+}
+
+.auth-container form {
+    text-align: left;
+}
+
+.auth-container form > label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.auth-container form > input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #D8C4AE;
+    outline: none;
+    font-family: inherit;
+}
+
+.auth-container form > input:focus {
+    border-color: #9B7764;
+}
+
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0 25px;
+    font-size: 11px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.auth-options a,
+.auth-switch a {
+    color: #9B7764;
+}
+
+.auth-button,
+.google-button {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 2px;
+}
+
+.auth-button {
+    background: #49352E;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    background: #9B7764;
+}
+
+.auth-divider {
+    margin: 25px 0;
+    color: #9B7764;
+    font-size: 11px;
+}
+
+.google-button {
+    background: white;
+    border: 1px solid #D8C4AE;
+    color: #49352E;
+    letter-spacing: 0;
+}
+
+.google-button:hover {
+    background: #F5EFE7;
+}
+
+.auth-switch {
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #9B7764;
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 35px 22px;
+    }
+} 
+/* =========================
+   VELOURA MY ACCOUNT DESIGN
+========================= */
+
+.auth-page:has(.account-details) {
+    background: #F5EFE7;
+    min-height: 100vh;
+    padding: 40px 16px;
+}
+
+.auth-container:has(.account-details) {
+    max-width: 650px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 40px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(73, 53, 46, 0.08);
+}
+
+.auth-container:has(.account-details) > h1 {
+    margin-top: 0;
+    color: #49352E;
+    letter-spacing: 5px;
+}
+
+.auth-container:has(.account-details) > h2 {
+    color: #49352E;
+    margin: 35px 0 20px;
+    text-align: center;
+}
+
+.auth-container .account-details {
+    background: #F5EFE7;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: left;
+    margin: 25px 0;
+}
+
+.account-details h3 {
+    color: #49352E;
+    font-size: 17px;
+    margin: 8px 0 20px;
+}
+
+.account-details p {
+    color: #9B7764;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: left;
+    margin: 12px 0 5px;
+}
+
+.account-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.account-menu a {
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 8px;
+    background: #F5EFE7;
+    color: #49352E;
+    border: 1px solid #D8C4AE;
+    border-radius: 12px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.account-menu a:hover {
+    background: #D8C4AE;
+}
+
+@media (max-width: 500px) {
+    .auth-container:has(.account-details) {
+        padding: 25px 18px;
+    }
+
+    .account-menu {
+        grid-template-columns: 1fr;
+    }
+} 
+/* VELOURA WISHLIST PAGE */
+
+.wishlist-page {
+    min-height: 65vh;
+    padding: 70px 8%;
+    text-align: center;
+    background: #F5EFE7;
+}
+
+.wishlist-page h1 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.wishlist-page > p {
+    color: #9B7764;
+    margin-bottom: 40px;
+}
+
+#wishlistContainer {
+    background: #FFFFFF;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 45px 20px;
+    border-radius: 15px;
+}
+
+#wishlistContainer p {
+    color: #9B7764;
+    margin-bottom: 20px;
+}
+
+#wishlistContainer a {
+    display: inline-block;
+    color: #49352E;
+    text-decoration: none;
+    border-bottom: 1px solid #C6A56B;
+    padding-bottom: 5px;
+}
+/* =========================
+   VELOURA SHOP PAGE
+========================= */
+
+.shop-page {
+    background: #F5EFE7;
+    min-height: 70vh;
+    padding-bottom: 70px;
+}
+
+.shop-heading {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+.shop-heading > p {
+    color: #9B7764;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.shop-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #49352E;
+    margin: 15px 0;
+}
+
+.shop-heading span {
+    color: #9B7764;
+}
+
+.shop-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 10px 20px 40px;
+}
+
+.shop-filters button {
+    padding: 12px 22px;
+    background: transparent;
+    color: #49352E;
+    border: 1px solid #D8C4AE;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-filters button:hover {
+    background: #49352E;
+    color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 0 7%;
+}
+
+@media (max-width: 700px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 4%;
+    }
+
+    .shop-heading h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   VELOURA LUXURY PRODUCT CARDS
+========================= */
+
+.product-card {
+    background: #FFFFFF;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #EDE3D9;
+    border-radius: 14px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(73, 53, 46, 0.13);
+}
+
+.product-image {
+    height: 260px;
+    background: linear-gradient(145deg, #F8F3ED, #EDE3D9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.product-card h3 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 14px 0 10px;
+}
+
+.product-card p {
+    color: #9B7764;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.product-card button {
+    background: #49352E;
+    color: #FFFFFF;
+    border: 1px solid #49352E;
+    padding: 12px 15px;
+    margin: 5px 3px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.product-card button:hover {
+    background: #C6A56B;
+    border-color: #C6A56B;
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+    .product-image {
+        height: 210px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 15px;
+    }
+
+    .product-card button {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+}
+
+/* VELOURA CHECKOUT DESIGN */
+
+#checkoutContainer {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(73, 53, 46, 0.08);
+    text-align: left;
+}
+
+#checkoutForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#checkoutForm label {
+    color: #49352E;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+#checkoutForm input,
+#checkoutForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #D8C4AE;
+    border-radius: 5px;
+    background: #FDFBF9;
+    font-size: 14px;
+    outline: none;
+}
+
+#checkoutForm textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#checkoutForm input:focus,
+#checkoutForm textarea:focus {
+    border-color: #9B7764;
+}
+
+#checkoutForm button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #checkoutContainer {
+        margin: 20px 15px;
+        padding: 22px;
+    }
+}
+/* ORDER CONFIRMATION PAGE */
+
+.order-page {
+    min-height: 100vh;
+    background: #F5EFE7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+.order-success {
+    width: 100%;
+    max-width: 550px;
+    padding: 50px 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 8px 30px rgba(73, 53, 46, 0.10);
+}
+
+.order-success h1 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 30px auto;
+    border-radius: 50%;
+    background: #E8DCCE;
+    color: #49352E;
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-success h2 {
+    color: #49352E;
+    margin-bottom: 18px;
+}
+
+.order-success p {
+    color: #9B7764;
+    line-height: 1.7;
+}
+
+.order-success .auth-button {
+    display: inline-block;
+    margin: 25px 0;
+    padding: 14px 25px;
+    background: #49352E;
+    color: white;
+    text-decoration: none;
+}
+
+.order-success > p:last-child a {
+    color: #49352E;
+}
+
+@media (max-width: 480px) {
+    .order-success {
+        padding: 35px 20px;
+    }
+}
+/* ABOUT US PAGE */
+
+.about-page {
+    background: #F5EFE7;
+    min-height: 70vh;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #EDE3D9;
+}
+
+.about-hero > p:first-child {
+    color: #9B7764;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.about-hero h1 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    margin: 25px 0;
+}
+
+.about-hero > p:last-child {
+    color: #9B7764;
+    font-size: 16px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 35px 0 15px;
+}
+
+.about-content p {
+    color: #80695D;
+    line-height: 1.9;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.about-content .auth-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-hero {
+        padding: 70px 20px;
+    }
+}
+/* CONTACT US PAGE */
+
+.contact-page {
+    background: #F5EFE7;
+    min-height: 75vh;
+    padding-bottom: 70px;
+}
+
+.contact-heading {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.contact-heading > p:first-child {
+    color: #9B7764;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.contact-heading h1 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.contact-heading > p:last-child {
+    color: #9B7764;
+}
+
+.contact-container {
+    max-width: 950px;
+    margin: auto;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+}
+
+.contact-info h2 {
+    color: #49352E;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #80695D;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contactForm label {
+    color: #49352E;
+    font-weight: 600;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #D8C4AE;
+    background: #FDFBF9;
+    font-size: 14px;
+    outline: none;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm button {
+    margin-top: 12px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        margin: 0 15px;
+        padding: 22px;
+    }
+
+    .contact-heading h1 {
+        font-size: 36px;
+    }
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+/* =========================
+   VELOURA MY ORDERS DESIGN
+========================= */
+
+#ordersContainer {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#ordersContainer .product-card {
+    background: #FFFFFF;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #EDE3D9;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(73, 53, 46, 0.06);
+}
+
+#ordersContainer .product-card h3 {
+    color: #49352E;
+    margin: 15px 0;
+}
+
+#ordersContainer .product-card p {
+    margin: 10px 0;
+}
+
+#ordersContainer .product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background: #F5EFE7;
+    border-radius: 10px;
+}
+
+#ordersContainer .product-card > div > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #EDE3D9;
+}
+
+#ordersContainer .product-card > div > div h3 {
+    margin: 5px 0;
+}
+/* ORDER STATUS DESIGN */
+
+.order-status {
+    display: inline-block;
+    background: #E8F0E5;
+    color: #456B43;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.delivery-status {
+    color: #9B7764;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 8px 0 18px;
+}
+/* VELOURA DELIVERY TRACKER */
+
+.delivery-tracker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 20px 10px;
+    background: #F5EFE7;
+    border-radius: 12px;
+}
+
+.delivery-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 55px;
+}
+
+.step-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #D8C4AE;
+    color: #9B7764;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.delivery-step.completed .step-icon {
+    background: #49352E;
+    border-color: #49352E;
+    color: #FFFFFF;
+}
+
+.delivery-step p {
+    font-size: 12px;
+    color: #49352E;
+    margin: 0;
+}
+
+.delivery-line {
+    flex: 1;
+    height: 2px;
+    background: #D8C4AE;
+    margin: 0 5px;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 500px) {
+    .delivery-tracker {
+        padding: 15px 5px;
+    }
+
+    .delivery-step {
+        min-width: 45px;
+    }
+
+    .delivery-step p {
+        font-size: 10px;
+    }
+}
+/* =========================
+   VELOURA PRODUCT DETAILS
+========================= */
+
+.product-details-page {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.product-details-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(73, 53, 46, 0.08);
+}
+
+.product-details-image {
+    background: #F5EFE7;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-details-info > p:first-child {
+    color: #C6A56B;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.product-details-info h2 {
+    font-family: 'Playfair Display', serif;
+    color: #49352E;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product-details-info h3 {
+    color: #9B7764;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-details-info p {
+    color: #76645B;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.product-details-info button {
+    background: #49352E;
+    color: #FFFFFF;
+    border: 1px solid #49352E;
+    padding: 14px 20px;
+    margin: 8px 5px 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-details-info button:hover {
+    background: #C6A56B;
+    border-color: #C6A56B;
+}
+
+@media (max-width: 700px) {
+    .product-details-page {
+        margin: 25px auto;
+        padding: 12px;
+    }
+
+    .product-details-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 18px;
+    }
+
+    .product-details-image {
+        height: 300px;
+    }
+
+    .product-details-info h2 {
+        font-size: 25px;
+    }
+}
+/* PRODUCT DETAILS PAGE HEADER */
+
+body > header.header {
+    background: #49352E;
+    color: #FFFFFF;
+    padding: 25px 5%;
+    text-align: center;
+}
+
+body > header.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+body > header.header > p {
+    color: #D8C4AE;
+    letter-spacing: 3px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+body > header.header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+body > header.header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+body > header.header nav a:hover {
+    color: #C6A56B;
+}
+/* PRODUCT BENEFITS */
+
+.product-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 25px;
+}
+
+.product-benefits li {
+    color: #76645B;
+    font-size: 14px;
+    padding: 10px 0 10px 25px;
+    position: relative;
+    border-bottom: 1px solid #EDE3D9;
+}
+
+.product-benefits li::before {
+    content: "✓";
+    color: #C6A56B;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+/* PRODUCT INGREDIENTS */
+
+.product-ingredients {
+    margin: 15px 0 25px;
+    padding: 18px;
+    background: #F5EFE7;
+    border-radius: 10px;
+}
+
+.product-ingredients p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.product-ingredients span {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #9B7764;
+    padding: 8px 14px;
+    margin: 5px;
+    border: 1px solid #D8C4AE;
+    border-radius: 20px;
+    font-size: 12px;
+}
+/* HOW TO USE SECTION */
+
+.product-how-to-use {
+    margin: 18px 0 28px;
+}
+
+.use-step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #EDE3D9;
+}
+
+.use-step span {
+    min-width: 38px;
+    height: 38px;
+    background: #49352E;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.use-step p {
+    margin: 0;
+    color: #76645B;
+    font-size: 14px;
+    line-height: 1.6;
+}
+/* PRODUCT QUANTITY SELECTOR */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.quantity-selector button {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.quantity-selector span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #49352E;
+}

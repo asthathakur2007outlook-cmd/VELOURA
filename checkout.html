@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | VELOURA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        Complimentary shipping on orders above ₹999
+    </div>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">VELOURA</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">My Bag</a>
+        </nav>
+    </header>
+
+    <main class="wishlist-page">
+        <h1>Checkout</h1>
+        <p>One step closer to your beauty essentials.</p>
+
+        <div id="checkoutContainer">
+            <form id="checkoutForm">
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+                <label for="checkoutEmail">Email Address</label>
+                <input type="email" id="checkoutEmail" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" placeholder="House number, street, area" required></textarea>
+
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter your city" required>
+
+                <label for="pincode">PIN Code</label>
+                <input type="text" id="pincode" placeholder="Enter your PIN code" required>
+
+                <div class="checkout-summary">
+
+    <h3>Order Summary</h3>
+
+    <p>Subtotal: ₹<span id="checkoutSubtotal">0</span></p>
+
+    <p>Discount: ₹<span id="checkoutDiscount">0</span></p>
+
+    <h3>Total: ₹<span id="checkoutTotal">0</span></h3>
+
+</div>
+                    <div class="coupon-section">
+    <h3>Have a Promo Code?</h3>
+
+    <div class="coupon-input">
+        <input
+            type="text"
+            id="couponCode"
+            placeholder="Enter coupon code"
+        >
+
+        <button type="button" onclick="applyCoupon()">
+            Apply
+        </button>
+    </div>
+
+    <p id="couponMessage"></p>
+</div>
+<button type="submit" class="auth-button">
+                    Place Order
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h2>VELOURA</h2>
+        <p>Elegance in Every Glow.</p>
+        <small>© 2026 VELOURA. All rights reserved.</small>
+    </footer>
+
+    <script src="Js/script.js"></script>
+</body>
+</html>
